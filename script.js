@@ -22,3 +22,13 @@ container.append(subTitle);
 container.appendChild(blackBox);
 blackBox.appendChild(boxTitle);
 blackBox.appendChild(boxText);
+
+const btn = document.querySelector('.jsBtn');
+btn.onclick = () => {
+  alert('Hello, world!');
+};
+
+const eventBtn = document.querySelector('.eventListenerBtn');
+eventBtn.addEventListener('click', () => {
+  alert('hello, world!');
+});
