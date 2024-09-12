@@ -32,3 +32,15 @@ const eventBtn = document.querySelector('.eventListenerBtn');
 eventBtn.addEventListener('click', () => {
   alert('hello, world!');
 });
+
+eventBtn.addEventListener('click', (e) => {
+  e.target.setAttribute('style', 'background-color: blue; color: white');
+});
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    alert('Clicked');
+  });
+});
