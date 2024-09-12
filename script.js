@@ -44,3 +44,27 @@ buttons.forEach((button) => {
     alert('Clicked');
   });
 });
+
+const link = document.querySelector('a');
+link.textContent = 'Mozzila Developer Network';
+link.href = 'https://developer.mozilla.org';
+link.target = '_blank';
+
+link.addEventListener('mouseover', () => {
+  link.style.cursor = 'pointer';
+  link.style.fontSize = '50px';
+});
+
+link.addEventListener('mouseleave', () => {
+  link.style.fontSize = '24px';
+});
+
+const sect = document.querySelector('section');
+const sectText = document.createElement('p');
+sectText.textContent = 'I was made from javascript';
+sect.appendChild(sectText);
+const moreText = document.createTextNode(
+  ' - the best source for web dev knowledge'
+);
+
+sectText.appendChild(moreText);
