@@ -76,6 +76,19 @@ const listForm = document.querySelector('#shopping-form');
 const listBtn = document.querySelector('.shopping-list-btn');
 
 listBtn.addEventListener('click', () => {
-  console.log(listForm.value);
-  list.appendChild();
+  const listValue = listForm.value;
+  listForm.value = '';
+  const listItem = document.createElement('li');
+  listItem.textContent = listValue;
+  list.appendChild(listItem);
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = 'Delete';
+  list.appendChild(deleteBtn);
+
+  deleteBtn.addEventListener('click', () => {
+    list.removeChild(listItem);
+    list.removeChild(deleteBtn);
+  });
+
+  listForm.focus();
 });
