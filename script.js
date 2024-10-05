@@ -92,3 +92,14 @@ listBtn.addEventListener('click', () => {
 
   listForm.focus();
 });
+
+const user = {
+  Name: 'Jared',
+  Age: 31,
+};
+
+const objBtn = document.querySelector('.alert-obj');
+
+objBtn.addEventListener('click', () => {
+  alert(user.Age);
+});
