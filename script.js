@@ -71,35 +71,90 @@
 // sectText.appendChild(moreText);
 
 //Shopping List
-const list = document.querySelector('.shopping-list-ul');
-const listForm = document.querySelector('#shopping-form');
-const listBtn = document.querySelector('.shopping-list-btn');
+// const list = document.querySelector('.shopping-list-ul');
+// const listForm = document.querySelector('#shopping-form');
+// const listBtn = document.querySelector('.shopping-list-btn');
 
-listBtn.addEventListener('click', () => {
-  const listValue = listForm.value;
-  listForm.value = '';
-  const listItem = document.createElement('li');
-  listItem.textContent = listValue;
-  list.appendChild(listItem);
-  const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = 'Delete';
-  list.appendChild(deleteBtn);
+// listBtn.addEventListener('click', () => {
+//   const listValue = listForm.value;
+//   listForm.value = '';
+//   const listItem = document.createElement('li');
+//   listItem.textContent = listValue;
+//   list.appendChild(listItem);
+//   const deleteBtn = document.createElement('button');
+//   deleteBtn.textContent = 'Delete';
+//   list.appendChild(deleteBtn);
 
-  deleteBtn.addEventListener('click', () => {
-    list.removeChild(listItem);
-    list.removeChild(deleteBtn);
-  });
+//   deleteBtn.addEventListener('click', () => {
+//     list.removeChild(listItem);
+//     list.removeChild(deleteBtn);
+//   });
 
-  listForm.focus();
-});
+//   listForm.focus();
+// });
 
 const user = {
-  Name: 'Jared',
-  Age: 31,
+  name: 'Jared',
+  age: 31,
+  surname: 'Usher',
+  'is an admin': true,
 };
 
-const objBtn = document.querySelector('.alert-obj');
+// const objBtn = document.querySelector('.alert-obj');
 
-objBtn.addEventListener('click', () => {
-  alert(user.Age);
-});
+// objBtn.addEventListener('click', () => {
+//   alert(user['is an admin']);
+// });
+
+console.log('Age' in user);
+console.log('test' in user);
+
+for (let key in user) {
+  console.log('key:', key);
+  console.log('value:', user[key]);
+}
+
+const schedule = {};
+
+const isEmpty = (obj) => {
+  for (let key in obj) {
+    return false;
+  }
+  return true;
+};
+
+console.log('is the array emptye?', isEmpty(schedule));
+
+const salaries = {
+  jared: 90000,
+  john: 50000,
+  kim: 49000,
+};
+
+const sumSalaries = (obj) => {
+  let sum = 0;
+  for (let key in obj) {
+    sum += obj[key];
+  }
+
+  return sum;
+};
+
+console.log('sum salaries', sumSalaries(salaries));
+
+let menu = {
+  width: 200,
+  height: 300,
+  title: 'my menu',
+};
+
+const multiplyNumeric = (obj) => {
+  for (let key in obj) {
+    if (typeof obj[key] === 'number') {
+      obj[key] *= 2;
+    }
+  }
+  return obj;
+};
+
+console.log('multiply numbers by 2', multiplyNumeric(menu));
