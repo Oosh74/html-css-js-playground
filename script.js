@@ -96,10 +96,34 @@ listBtn.addEventListener('click', () => {
 const user = {
   Name: 'Jared',
   Age: 31,
+  'Likes Birds': true,
 };
 
 const objBtn = document.querySelector('.alert-obj');
 
 objBtn.addEventListener('click', () => {
-  alert(user.Age);
+  alert(user['Likes Birds']);
 });
+
+let key = 'Likes Birds';
+console.log(user.key);
+console.log(user[key]);
+
+let fruit = 'apple, or some other variable that may change';
+
+let bag = {
+  [fruit]: 5, //this will equate to {apple: 5}
+  //Can also do something like:
+  [fruit + 'Computers']: 5, //appleComputers = 5;
+};
+
+const makeUser = (name, age) => {
+  return {
+    name, //same as name: name
+    age,
+  };
+};
+
+let newUser = makeUser('John', 30);
+
+console.log(newUser);
