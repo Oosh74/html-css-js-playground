@@ -272,6 +272,13 @@ const filterInventors = (arr) => {
 console.log(filterInventors(inventors));
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
+const filterInventorFirstNames = (arr) => {
+  return arr.map((inventor) => {
+    return `${inventor.first} ${inventor.last}`;
+  });
+};
+
+console.log('inventor first names', filterInventorFirstNames(inventors));
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
