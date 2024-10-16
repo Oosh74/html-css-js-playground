@@ -325,6 +325,18 @@ console.log("People's names", checkLetters(people));
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 
+const sortAlphabetically = (arr) => {
+  return arr.sort((lastOne, nextOne) => {
+    const [last, first] = lastOne.split(', ');
+    const [nextLast, nextFirst] = nextOne.split(', ');
+    console.log(nextFirst);
+    console.log(first);
+
+    return last > nextLast ? 1 : -1;
+  });
+};
+
+console.log('Sort', sortAlphabetically(people));
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = [
@@ -343,3 +355,15 @@ const data = [
   'car',
   'truck',
 ];
+
+const sumInstances = (arr) => {
+  return arr.reduce((obj, item) => {
+    if (!obj[item]) {
+      obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+  }, {});
+};
+
+console.log('Summed items', sumInstances(data));
