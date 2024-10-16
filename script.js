@@ -315,6 +315,13 @@ console.log('yers lived', sortYearsLived(inventors));
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+const checkLetters = (arr) => {
+  return arr.filter((person) => {
+    return person.includes('ev');
+  });
+};
+
+console.log("People's names", checkLetters(people));
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 
