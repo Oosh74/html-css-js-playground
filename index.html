@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="style.css " rel="stylesheet" type="text/css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -40,15 +41,33 @@
       <button class="alert-obj">Alert Object</button>
     </section>
     <table>
+      <caption>
+        Dinosaurs in the Jurassic period
+      </caption>
       <tr>
-        <th>First Header</th>
-        <th>Second Header</th>
-        <th>Third Header</th>
+        <th scope="col">First Header</th>
+        <th scope="col">Second Header</th>
+        <th scope="col">Third Header</th>
+        <th scope="col">Fourth Header</th>
       </tr>
       <tr>
         <td>Data 1</td>
-        <td>Data 2</td>
-        <td>Data 3</td>
+        <td colspan="3">Data 2</td>
+      </tr>
+      <tr>
+        <td>More Data 1</td>
+        <td>More Data 2</td>
+        <td>More Data 3</td>
+      </tr>
+      <tr>
+        <td>More Data 1</td>
+        <td>More Data 2</td>
+        <td>More Data 3</td>
+      </tr>
+      <tr>
+        <td>More Data 1</td>
+        <td>More Data 2</td>
+        <td>More Data 3</td>
       </tr>
     </table>
   </body>
