@@ -367,3 +367,15 @@ const sumInstances = (arr) => {
 };
 
 console.log('Summed items', sumInstances(data));
+
+const yoName = document.querySelector('#first-name');
+const nameBtn = document.querySelector('.submitName');
+const greetingElement = document.createElement('p');
+
+let greeting = `Hello, my name is ${yoName.value}`;
+
+greetingElement.innerText = greeting;
+
+nameBtn.addEventListener('click', () => {
+  nameBtn.insertAdjacentElement('afterend', greetingElement);
+});

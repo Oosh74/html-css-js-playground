@@ -47,8 +47,8 @@ h2 {
 }
 
 p {
-  font-size: 1.4rem;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  line-height: 1.5;
   word-spacing: 0.6rem;
   font-family: 'interregular', sans-serif;
 }
@@ -63,4 +63,10 @@ tr,
 td,
 th {
   border: 1px solid black;
+}
+
+.line {
+  border-top: 1px solid black;
+  width: 100%;
+  margin: 40px 0px 0px 40px;
 }
