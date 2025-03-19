@@ -156,3 +156,30 @@ input:invalid {
 input:valid {
   border: 10px solid green;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px;
+  /*short-hand:  
+  grid-template: 50px 50px / 50px 50px 50px; 
+                  Row track / Column track
+  */
+  /* Grid spacing can be implicit or explicit. 
+  When adding more html elements into the grid,
+  it will implicitly space it. However, we can control
+  the implicit spacing as such:*/
+  grid-auto-rows: 50px;
+  grid-auto-columns: 50px;
+  /* Gap can also be used in Grid. This sets the spacing between grid cells.
+  Gap can also be shorthanded as such: 
+  gap: 24px (row gap) 24px (column gap)*/
+  column-gap: 24px;
+  row-gap: 24px;
+  background-color: #efefef;
+  padding: 16px;
+}
+
+.grid-container div {
+  border: 1px solid blue;
+}
