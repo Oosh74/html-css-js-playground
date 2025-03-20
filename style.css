@@ -183,3 +183,18 @@ input:valid {
 .grid-container div {
   border: 1px solid blue;
 }
+
+.grid-cont-two {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100px 100px;
+}
+
+.grid-cont-two div {
+  border: 1px solid blue;
+}
+
+.grid-cont-two div:nth-child(1) {
+  grid-column: 1/-1;
+  background-color: orange;
+}
